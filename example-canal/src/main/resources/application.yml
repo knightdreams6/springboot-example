@@ -1,0 +1,16 @@
+canal:
+  # 对应canal-server端配置 tcp rabbitMQ
+  mode: rabbitMQ
+
+spring:
+  rabbitmq:
+    host: 192.168.50.44
+    port: 5672
+    username: imaboss
+    password: imaboss
+    # 消息确认配置项
+    # 确认消息已发送到交换机(Exchange)
+    publisher-confirm-type: correlated
+    # 确认消息已发送到队列(Queue)
+    publisher-returns: true
+    virtual-host: /
