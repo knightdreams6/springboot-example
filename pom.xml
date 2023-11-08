@@ -19,6 +19,7 @@
   <modules>
     <module>example-nosql-neo4j</module>
     <module>example-canal</module>
+    <module>example-flowable</module>
   </modules>
 
   <properties>

@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.48.44:3306/flowable-demo?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
+    username: root
+    password: F7FPfW-HBG2Dxwav
+
+flowable:
+  # 流程定义是否需要自动部署
+  check-process-definitions: true
+  # 自动部署的名称
+  deployment-name: "SpringBootAutoDeployment"
+  # 搜索流程定义以进行自动部署的文件夹
+  process-definition-location-prefix: "classpath*:/processes/"
+  # 流程定义后缀名
+  process-definition-location-suffixes:
+    - "**.bpmn20.xml"
+    - "**.bpmn"
+  # 是否激活异步执行器
+  async-executor-activate: true
+  # 是否激活异步历史记录执行器
+  async-history-executor-activate: true
+  # 是否应使用数据库历史记录
+  db-history-used: true
+  # 是否启用历史记录清理
+  enable-history-cleaning: false
+  # 历史记录级别
+  history-level: audit
+  # 表单字段验证
+  form-field-validation-enabled: false
+  # 用户管理
+  idm:
+    enabled: false
+  # 关闭DMN引擎
+  dmn:
+    enabled: false
+  # 关闭cmmn引擎
+  cmmn:
+    enabled: false
