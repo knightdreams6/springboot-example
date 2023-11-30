@@ -20,6 +20,7 @@
     <module>example-nosql-neo4j</module>
     <module>example-canal</module>
     <module>example-flowable</module>
+    <module>example-webflux</module>
   </modules>
 
   <properties>
