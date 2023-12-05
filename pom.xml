@@ -21,6 +21,7 @@
     <module>example-canal</module>
     <module>example-flowable</module>
     <module>example-webflux</module>
+    <module>example-elasticsearch</module>
   </modules>
 
   <properties>
