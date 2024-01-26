@@ -4,6 +4,19 @@
 
 
 
+docker安装文档：https://neo4j.com/docs/operations-manual/current/docker/
+
+```shell
+docker run 
+    --name neo4j -d 
+    --restart always 
+    --publish=7474:7474 --publish=7687:7687
+    --env NEO4J_AUTH=neo4j/knight21@ 
+    --volume=/home/docker/neo4j/data:/data 
+neo4j:5.15.0-community
+```
+
+
 #### 什么是？
 
 图形数据库是一种专门用于存储和管理图形数据的数据库系统。与传统的关系型数据库或文档数据库不同，图形数据库以图形结构的方式存储数据，其中节点表示实体，边表示节点之间的关系。图形数据库非常适合表示和处理复杂的关系型数据。
@@ -124,17 +137,19 @@ Neo4j 的真正力量在于连接的数据。要关联任意两个节点，请�
 
 docker 镜像地址仓库:  https://hub.docker.com/_/neo4j
 
-```shell
-# 它允许您通过浏览器访问 neo4j http://localhost:7474。
-# 默认情况下，这需要您登录neo4j/neo4j 并更改密码。
-# 出于开发目的，您可以通过传递--env=NEO4J_AUTH=none给 docker run 来禁用身份验证。  
-docker pull neo4j
+docker安装文档：https://neo4j.com/docs/operations-manual/current/docker/
 
+```shell
+docker pull neo4j:5.15.0-community
+```
+
+```shell
 docker run \
+    --name neo4j -d \
     --publish=7474:7474 --publish=7687:7687 \
-    --volume=$HOME/neo4j/data:/data \
+    --volume=/home/docker/neo4j/data:/data \
     --env=NEO4J_AUTH=none \
-    neo4j  
+    neo4j:5.15.0-community  
 ```
 
 
