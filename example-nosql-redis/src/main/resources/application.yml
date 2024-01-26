@@ -1,0 +1,14 @@
+spring:
+  data:
+    redis:
+      repositories:
+        enabled: true
+      host: 192.168.3.60
+      port: 6379
+      lettuce:
+        pool:
+          enabled: true
+
+logging:
+  level:
+    io.lettuce.core.RedisChannelHandler: debug
